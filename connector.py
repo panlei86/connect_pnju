@@ -131,11 +131,11 @@ def testConn():
 if __name__ == '__main__':
 	# 每隔一分钟检测一次？
 	print 'running...'
-	con = connector('DG1033021','8792165')
+	con = connector('DGxxxx','xxxx')
 	con.logout_bras()
-        time.sleep(3)
-        con.login_pnju()
-        while(True):
+    time.sleep(3)
+    con.login_pnju()
+    while(True):
                 try:
                         status = os.system('ping www.baidu.com')
                         print time.strftime('%Y-%m-%d %X'), 'HTTP status', status
@@ -153,10 +153,4 @@ if __name__ == '__main__':
                                 time.sleep(120)
                 except Exception, e:
                         pass
-        '''
-	con = connector('DG1033021','8792165')
-        # p.nju和bras先下线
-        con.logout_bras()
-        # 再连p.nju
-        con.login_pnju()
-        '''
+
